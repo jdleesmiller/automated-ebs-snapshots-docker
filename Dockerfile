@@ -1,8 +1,6 @@
 FROM python:2
 
-COPY requirements.txt requirements.txt
-
-RUN pip install -r requirements.txt
+RUN echo "Force rebuild"
 
 COPY automated-ebs-snapshots automated-ebs-snapshots
 
