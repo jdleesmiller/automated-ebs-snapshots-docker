@@ -1,4 +1,4 @@
-FROM python:2
+FROM python:3
 
 RUN echo "Force rebuild"
 
@@ -6,9 +6,9 @@ COPY automated-ebs-snapshots automated-ebs-snapshots
 
 WORKDIR automated-ebs-snapshots
 
-RUN python setup.py build
-RUN python setup.py sdist bdist_wheel
-RUN pip install dist/*.whl
+RUN python3 setup.py build
+RUN python3 setup.py sdist bdist_wheel
+RUN pip3 install dist/*.whl
 
 
 # The command seems to be OK with running as an unprivileged user.
