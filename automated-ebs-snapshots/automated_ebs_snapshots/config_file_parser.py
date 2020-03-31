@@ -1,7 +1,7 @@
 """ Configuration file parser """
 import logging
 import sys
-from ConfigParser import SafeConfigParser, NoOptionError
+from configparser import SafeConfigParser, NoOptionError
 
 logger = logging.getLogger(__name__)
 

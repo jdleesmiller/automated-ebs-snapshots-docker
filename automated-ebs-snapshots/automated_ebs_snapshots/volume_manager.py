@@ -199,7 +199,7 @@ def watch_from_file(connection, file_name):
     :returns: None
     """
     with open(file_name, 'r') as filehandle:
-        for line in filehandle.xreadlines():
+        for line in filehandle:
             volume, interval, retention = line.rstrip().split(',')
             watch(
                 connection,
@@ -217,7 +217,7 @@ def unwatch_from_file(connection, file_name):
     :returns: None
     """
     with open(file_name, 'r') as filehandle:
-        for line in filehandle.xreadlines():
+        for line in filehandle:
             volume, interval, retention = line.rstrip().split(',')
             unwatch(connection, get_volume_id(connection, volume))
 

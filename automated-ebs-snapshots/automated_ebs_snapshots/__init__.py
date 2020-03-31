@@ -66,7 +66,7 @@ if args.log_file:
         'backupCount': 5
     }
 
-    for logger in LOG_CONFIG['loggers'].keys():
+    for logger in list(LOG_CONFIG['loggers'].keys()):
         LOG_CONFIG['loggers'][logger]['handlers'].append('file')
 
 logging.config.dictConfig(LOG_CONFIG)
@@ -138,7 +138,7 @@ def main():
             daemon.run()
 
         else:
-            print 'Valid options for --daemon are start, stop and restart'
+            print('Valid options for --daemon are start, stop and restart')
             sys.exit(1)
 
     # Connect to AWS

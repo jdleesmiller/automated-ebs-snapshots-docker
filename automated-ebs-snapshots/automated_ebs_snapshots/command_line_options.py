@@ -2,7 +2,7 @@
 import argparse
 import sys
 import os.path
-from ConfigParser import SafeConfigParser
+from configparser import SafeConfigParser
 
 from automated_ebs_snapshots.valid_intervals import VALID_INTERVALS
 
@@ -107,6 +107,6 @@ actions_ag.add_argument(
 args = parser.parse_args()
 
 if args.version:
-    print('Automated EBS Snapshots version {}'.format(
-        settings.get('general', 'version')))
+    print(('Automated EBS Snapshots version {}'.format(
+        settings.get('general', 'version'))))
     sys.exit(0)

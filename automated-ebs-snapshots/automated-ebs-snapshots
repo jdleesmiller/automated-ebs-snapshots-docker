@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """ Automated EBS automated_ebs_snapshots
 
 Provides automatic scheduled snapshots of AWS EC2 EBS volumes
