@@ -1,6 +1,8 @@
 FROM python:2
 
-RUN pip install automated-ebs-snapshots
+COPY requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt
 
 # The command seems to be OK with running as an unprivileged user.
 USER nobody
